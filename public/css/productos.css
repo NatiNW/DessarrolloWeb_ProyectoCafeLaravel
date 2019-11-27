@@ -1,0 +1,75 @@
+.general{
+  padding: 29px;
+}
+.boton{
+  background-color:#B96340;
+
+}
+.boton a{
+  color: white;
+  font-size: 20px;
+}
+
+.productos img{
+  width: 100px;
+  text-align: center;
+  border-radius: 70%;
+
+}
+
+.article{
+  margin: 15px;
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+  font-size: 15px;
+}
+h1{
+font-family: "lobster", cursive;
+color:white;
+}
+
+h2{
+font-family: "lobster", cursive;
+color:white;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+}
+.navbar-text {
+  display: -webkit-inline-box;
+
+}
+
+.inicio-lista-1 button{
+  width: 150px;
+}
+
+@media (max-width: 320px) {
+  .navbar-text {
+    display: inline-block;
+  }
+}
+@media (max-width: 375px) {
+  .navbar-text {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar-text {
+    display: inline-block;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-text {
+    display: inline-block;
+  }
+}
