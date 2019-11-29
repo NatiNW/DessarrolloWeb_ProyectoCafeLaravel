@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -26,7 +25,7 @@
       </ul>
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link" href="shop.php"><i class="fas fa-shopping-cart"></i></a>
+          <a class="nav-link" href="shop"><i class="fas fa-shopping-cart"></i></a>
         </li>
         <?php if(!isset($_SESSION) || empty($_SESSION['email'])){?>
 
@@ -41,10 +40,10 @@
           Bienvenido <?= $_SESSION['email'] ?? ''?>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="miPerfil.php">Mi Perfil</a>
+          <a class="nav-link" href="{{route('miPerfil')}}">Mi Perfil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="logout.php"> Logout</a>
+          <a class="nav-link" href="logout"> Logout</a>
         </li>
 <?php } ?>
 
@@ -61,7 +60,7 @@
   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
       <nav class="navbar navbar-expand-lg navbar-light bg">
-        <a class="navbar-brand" href="index.php">
+        <a class="navbar-brand" href="index">
           <img src="/img/pocilloinicioblanco.png" alt="Coffee">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,22 +70,22 @@
         <div class="collapse navbar-collapse navprincipal" id="navbarSupportedContent" >
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.php">Inicio</a>
+              <a class="nav-link" href="{{url('/')}}">Inicio</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="productos.php">Productos</a>
+              <a class="nav-link" href="productos">Productos</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="shop.php">Tienda</a>
+              <a class="nav-link" href="tienda">Tienda</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="nosotros.php">Nosotros</a>
+              <a class="nav-link" href="nosotros">Nosotros</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="faq.php">Preguntas Frecuentes</a>
+              <a class="nav-link" href="preguntasFrecuentes">Preguntas Frecuentes</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="contacto.php">Contacto</a>
+              <a class="nav-link" href="contacto">Contacto</a>
             </li>
           </ul>
 
@@ -102,10 +101,13 @@
 
 @yield('principal')
 
+@yield('productos')
 
+@yield('nosotros')
 
+@yield('faq')
 
-
+@yield('contacto')
 <footer class='container '>
   <div class="row">
 
@@ -113,12 +115,12 @@
   <div class="col-md-6 footer-identidad">
   <h6>Coffee Code</h6>
   <ul>
-    <li><a href="index.php">Inicio</a></li>
-    <li><a href="productos.php">Productos</a></li>
-    <li><a href="shop.php">Tienda</a></li>
-    <li><a href="nosotros.php">Nosotros</a></li>
-    <li><a href="faq.php">Preguntas Frecuentes</a></li>
-    <li><a href="contacto.php">Contactanos</a></li>
+    <li><a href="/">Inicio</a></li>
+    <li><a href="productos">Productos</a></li>
+    <li><a href="shop">Tienda</a></li>
+    <li><a href="nosotros">Nosotros</a></li>
+    <li><a href="preguntasFrecuentes">Preguntas Frecuentes</a></li>
+    <li><a href="contacto">Contactanos</a></li>
   </ul>
 </div>
 

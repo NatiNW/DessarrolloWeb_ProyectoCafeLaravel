@@ -1,1 +1,1 @@
-@extends ('principal')
+@extends ('principal') 
