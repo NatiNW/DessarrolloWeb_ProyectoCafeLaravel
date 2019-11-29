@@ -1,7 +1,7 @@
 @extends('plantilla')
 
 @section('principal')
-  <link rel="stylesheet" href="/css/registro.css">
+  <link rel="stylesheet" href="/css/login.css">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
