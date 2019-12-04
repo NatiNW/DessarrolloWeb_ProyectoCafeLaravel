@@ -23,14 +23,14 @@
     <div class="container">
     <div class="row nosotros">
   <div class="col-12">
-    <h3>Nuestra Historia</h3>
-    <h4>comprometida con el planeta</h4>
+    <h1>Nuestra Historia</h1>
+    <h2>comprometida con el planeta</h2>
       <p> Desde siempre hemos tenido el convencimiento de que las empresas pueden, y deben, ejercer un impacto positivo en las comunidades a las que prestan servicio contribuyendo a generar un medio ambiente mas sano y seguro.</p>
       <div class="img">
       <img src="img/salvar-tierra.jpg" alt="">
     </div>
 
-    <h4>calidad garantizada</h4>
+    <h2>calidad garantizada</h2>
       <p>Desde la creación de Coffe Code,nos propusimos llevarle al mundo el mejor café premium Argentino, creamos nuestra propia línea de café encapsulado que incluye cafés fuertes, balanceados y con diferentes perfiles ajustados a los más exigentes públicos internacionales</p>
       <div class="img">
         <img src="img/historia cafe.jpg" alt="">
