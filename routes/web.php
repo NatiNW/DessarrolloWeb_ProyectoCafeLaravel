@@ -3,9 +3,8 @@
 Route::get('/', function () {
   return view('presentacion');
  });
-Route::get('/productos', function () {
-    return view('productos');
-});
+
+
 Route::get('/tienda', function () {
     return view('tienda');
 });
@@ -21,12 +20,6 @@ Route::get('/preguntasFrecuentes', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 });
-
-
-
-
-
-
 
 Auth::routes();
 

@@ -22,13 +22,30 @@ div nav ul li{
 .navsuperior{
   background-color: Peru;
   width: 20px;
+
 }
 
+.nav-item{
+    margin-right: 20px;
+}
+
+#avatar{
+  width: 50px;
+
+}
 
 .navinferior{
  background-color: #934F33;
 }
 
+.dropdown-menu{
+  background-color: Peru;
+
+}
+
+.dropdown-menu a:hover {
+  background-color: #B96340 ;
+}
 
 .btn-ttc{
   background-color: #B96340;
