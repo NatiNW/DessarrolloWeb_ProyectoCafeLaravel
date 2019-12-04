@@ -16,7 +16,7 @@ class AgregarColumnaIsAdmin extends Migration
       Schema::table('users', function (Blueprint $table) {
           $table->boolean('admin')->default(false);
       });
-    }
+    } 
 
     /**
      * Reverse the migrations.

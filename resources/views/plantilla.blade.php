@@ -28,7 +28,7 @@
           <a class="nav-link" href="shop"><i class="fas fa-shopping-cart"></i></a>
         </li>
 
-        @guest
+        @guest 
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('login') }}">{{ __('Logueate') }}</a><i class="fas fa-sign-in-alt"></i>
             </li>
