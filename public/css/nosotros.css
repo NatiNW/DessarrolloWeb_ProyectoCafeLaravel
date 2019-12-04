@@ -1,5 +1,12 @@
-.nosotros h4{
+.nosotros h2{
     font-family: 'Lobster', cursive;
+    text-align: center;
+    color: black;
+}
+
+.nosotros h1{
+  text-align: center;
+  color: black;
 }
 
 .nosotros p{
@@ -13,6 +20,9 @@ p {
 
 }
 
+.video{
+  background-position: center;
+}
 
 .general{
   padding: 29px;
@@ -27,4 +37,8 @@ p {
 .nosotros{
   background-color: peru;
   padding-bottom: 20px;
+}
+
+.img{
+  text-align: center;
 }
