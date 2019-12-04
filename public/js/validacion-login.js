@@ -12,11 +12,13 @@ for ( var elemento of formulario.elements){
     if (elemento.value == '' ){
       evento.preventDefault();
       console.log(`El elemento ${elemento.name} tiene valor nulo`);
-      var parrafo = document.createElement('p');
-      parrafo.append('El campo esta vacio');
-      // pENDIENTE
-      elemento.parentElement.appendChild(parrafo);
+      var div = elemento.parentElement;
+      div.querySelector('p').innerHTML = 'El campo esta vacio';
+      div.querySelector('p').style.color = 'pink'
       console.log(elemento);
+    }else{
+      var div = elemento.parentElement;
+      div.querySelector('p').innerHTML = '';
     }
   }
 }
