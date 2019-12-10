@@ -1,5 +1,7 @@
+@extends('plantilla')
+@section('principal')
 
-
+@csrf
 <div class="row carga">
   <div class="col-12 carga-de-productos">
     <h3>Carga de nuevos productos</h3>
@@ -54,3 +56,4 @@
   </div>
 
 </div>
+@endsection
