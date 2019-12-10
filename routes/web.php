@@ -3,8 +3,9 @@
 Route::get('/', function () {
   return view('presentacion');
  });
-Route::get('/productos', function () {
-    return view('productos');
+Route::get('/productos','productosController@listado');
+//function () {
+  //  return view('productos');
 });
 Route::get('/tienda', function () {
     return view('tienda');
@@ -22,11 +23,11 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
+Route::get('/usuario','usuariosController@listado');
 
+Route::get('/carrito','carritoController@listado');
 
-
-
-
+Route::get('/categoria','categoriaController@listado');
 
 Auth::routes();
 
