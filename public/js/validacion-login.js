@@ -14,7 +14,7 @@ for ( var elemento of formulario.elements){
       console.log(`El elemento ${elemento.name} tiene valor nulo`);
       var div = elemento.parentElement;
       div.querySelector('p').innerHTML = 'El campo esta vacio';
-      div.querySelector('p').style.color = 'pink'
+      div.querySelector('p').style.color = 'red'
       console.log(elemento);
     }else{
       var div = elemento.parentElement;
