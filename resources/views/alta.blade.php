@@ -8,32 +8,53 @@
 
     <div class="form-group">
 
-    <form class="" action="carga_de_productos.php" method="post"  enctype="multipart/form-data">
-
+    <form class="" action="alta" method="post"  enctype="multipart/form-data">
+        @csrf
         <label for="nombre_del_producto">Nombre del Producto:</label>
-        <input type="text" name="nombre_producto" value="<?=$nombreProducto?>">
+        <input type="text" name="nombre_producto" value="">
+        @error('nombre_producto')
+        <strong style="color:red">
+
+         {{$message}}
+       </strong>
+        @enderror
       </div>
-      <small style="color:red"><?= $errorNombreProducto ?? '' ?> </small>
+      <small style="color:red"></small>
       <div class="form-group">
 
           <label for="precio">Precio:</label>
-          <input type="text" name="precio" value="<?=$precio?>">
+          <input type="text" name="precio" value="">
+          @error('precio')
+          <strong style="color:red">
+           {{$message}}
+         </strong>
+          @enderror
         </div>
-        <small style="color:red"><?= $errorPrecio ?? '' ?> </small>
+        <small style="color:red"> </small>
         <div class="form-group">
 
             <label for="precio">Stock:</label>
-            <input type="text" name="stock" value="<?=$stock?>">
+            <input type="text" name="stock" value="">
+            @error('stock')
+            <strong style="color:red">
+             {{$message}}
+           </strong>
+            @enderror
           </div>
-          <small style="color:red"><?= $errorStock ?? '' ?> </small>
+          <small style="color:red"> </small>
       <div class="form-group">
         <label for="foto_del_producto">Subir Foto:</label>
                 <input type="file" id="foto-de-producto" name="foto">
+                @error('foto')
+                <strong style="color:red">
+                 {{$message}}
+               </strong>
+                @enderror
               </div>
-              <small style="color:red"><?= $errorFoto ?? '' ?> </small>
+              <small style="color:red"> </small>
         <div class="form-group">
           <label for="categoria_del_producto">Categoría:</label>
-          <select class="" name="categoria" value="<?=$categoria?>">
+          <select class="" name="categoria" value="">
 
             <option value="descafeinado">Descafeinado</option>
             <option value="largo">Largo</option>
@@ -44,9 +65,14 @@
         <p>
       <label for="descripcion_del_producto">Descripción del Producto:</label>
       </p>
-          <textarea name="descripcion" class= "form-control" value="<?=$descripcion?>"></textarea>
+          <textarea name="descripcion" class= "form-control" value=""></textarea>
+          @error('descripcion')
+          <strong style="color:red">
+           {{$message}}
+         </strong>
+          @enderror
         </div>
-        <small style="color:red"><?= $errorDescripcion ?? '' ?> </small>
+        <small style="color:red"> </small>
         <div class="form-group">
         </div>
         <button type="submit" name="button">Enviar</button>

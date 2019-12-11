@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 
 class carritoController extends Controller
 {
-  public function listado(){
-    $producto=[];
-    $cliente=[];
-    $precioProducto=[];
-    $cantidadProducto=[];
+  public function agregar(Request $form){
+    $productos=new producto();
+
+  }
 
 }

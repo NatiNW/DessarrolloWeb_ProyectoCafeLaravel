@@ -13,4 +13,9 @@ class usuarioController extends Controller
     $avatar=[];
 
   }
+
+
+
+
+
 }
