@@ -10,5 +10,4 @@ class producto extends Model
   public $primaryKey="ID";
   public $timestamps="false";
   public $guarded=[];
-
 }

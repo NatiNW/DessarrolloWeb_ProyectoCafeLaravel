@@ -56,6 +56,9 @@
                     </form>
                 </div>
             </li>
+            <li class="nav-item">
+          <a class="nav-link" href="miPerfil">Mi Perfil</a>
+        </li>
         @endguest
 
 
@@ -98,14 +101,9 @@
             <li class="nav-item active">
               <a class="nav-link" href="contacto">Contacto</a>
             </li>
-          @guest
-          @if(Auth::user()->isAdmin())
-            <li class="nav-item active">
-              <a class="nav-link" href="administrador">Administrador</a>
-            </li>
-           @endif
+        
 
-          @endguest
+
           </ul>
 
         </div>

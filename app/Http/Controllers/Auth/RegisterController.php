@@ -52,7 +52,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'avatar'=>['nullable','image'],
+            'avatar'=>['nullable','image', 'between: 100,1024'],
             'terminos'=>['required'],
         ]);
     }
@@ -75,4 +75,5 @@ class RegisterController extends Controller
             'avatar' => ($ruta),
         ]);
     }
+    
 }
