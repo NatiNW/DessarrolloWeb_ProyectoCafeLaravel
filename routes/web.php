@@ -32,6 +32,11 @@ Route::get('/carrito','carritoController@listado');
 
 Route::get('/categoria','categoriaController@listado');
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 61d67a1233f8d86a3fe234e0341dd4cfc2e0409c
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

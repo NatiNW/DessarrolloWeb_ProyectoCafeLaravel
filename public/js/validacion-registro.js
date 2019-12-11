@@ -1,15 +1,28 @@
-window.onload=function(){
+
+window.onload = function(){
   var formulario=document.querySelector("#registroFormulario");
-  var campoPassword=document.querySelector('input[name=password]');
-  var campoPassConfirm=document.querySelector('input[name=password_confirmation]');
-  var campoAvatar=document.querySelector('input[name=avatar]');
+  var campoPassword=formulario.querySelector('input[name="password"]');
+  var campoPassConfirm=formulario.querySelector('input[name="password_confirmation"]');
+  var campoAvatar=formulario.querySelector('input[name="avatar"]');
 
-
+  function longitudPass(evento){
+    if(campoPassword.value.length < 8){
+      evento.preventDefault()
+      console.log('el password debe tener al menos 8 caracteres');
+      var div = campoPassword.parentElement;
+      console.log(div);
+      div.querySelector('p').innerHTML = 'El password debe tener al menos 8 caracteres';
+      div.querySelector('p').style.color = 'red'
+    }else{
+      var div = campoPassword.parentElement;
+      div.querySelector('p').innerHTML = '';
+    }
+  }
 
   function chequearPasswords(evento){
 
     if (campoPassword.value!=campoPassConfirm.value){
-      evento.preventDefault(evento)
+      evento.preventDefault()
       console.log('Ambos passwords no coinciden');
       var div = campoPassConfirm.parentElement;
       div.querySelector('p').innerHTML = 'Los passwords no coinciden';
@@ -20,6 +33,11 @@ window.onload=function(){
       div.querySelector('p').innerHTML = '';
     }
   }
+
+
+
+
+
 
   formulario.onsubmit=function (evento){
 
@@ -39,8 +57,8 @@ window.onload=function(){
         }
       }
     }
+    longitudPass(evento)
     chequearPasswords(evento)
-
     }
 
 
@@ -60,6 +78,7 @@ window.onload=function(){
         var div = campoEmail.parentElement;
         div.querySelector('p').innerHTML = '';
       }
+    }
 
 
 
@@ -71,5 +90,8 @@ campoPassConfirm.onblur = function(evento){
   chequearPasswords(evento);
 
 }
-  }
+
+campoPassword.onblur = function(evento){
+  longitudPass(evento);
+}
 };
