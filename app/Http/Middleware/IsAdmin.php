@@ -15,10 +15,10 @@ class IsAdmin
      */
     public function handle($request, Closure $next)
     {
-      $user = \Auth::user(); 
+      $user = \Auth::user();
       if ($user && $user->admin) {
           return $next($request);
       }
-      return \Redirect::back();
+      return redirect('/');
     }
 }

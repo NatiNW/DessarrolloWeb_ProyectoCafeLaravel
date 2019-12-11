@@ -74,7 +74,7 @@
   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
       <nav class="navbar navbar-expand-lg navbar-light bg">
-        <a class="navbar-brand" href="index">
+        <a class="navbar-brand" href="{{url('/')}}">
           <img src="/img/pocilloinicioblanco.png" alt="Coffee">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,6 +101,12 @@
             <li class="nav-item active">
               <a class="nav-link" href="contacto">Contacto</a>
             </li>
+
+            @if(Auth::user()&&(Auth::user()->admin))
+            <li class="nav-item active">
+              <a class="nav-link" href="administrador">Administrador</a>
+            </li>
+           @endif
 
           </ul>
 

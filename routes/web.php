@@ -22,7 +22,7 @@ Route::post('/baja','ProductosController@eliminarProducto');
 
 Route::get('/productos','ProductosController@listado');
 
-Route::get('/alta','ProductosController@alta');
+Route::get('/alta','ProductosController@alta')->middleware('admin');
 
 Route::post('/alta','ProductosController@agregarProducto');
 
@@ -32,11 +32,14 @@ Route::get('/carrito','carritoController@listado');
 
 Route::get('/categoria','categoriaController@listado');
 
-<<<<<<< HEAD
-=======
+Route::get('/administrador', function(){
+  return view('administrador');
+})->middleware('isAdmin');
 
 
->>>>>>> 61d67a1233f8d86a3fe234e0341dd4cfc2e0409c
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
