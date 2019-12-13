@@ -42,7 +42,7 @@
       <div class="row">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 inicio-productos">
 
-        <button type="button" class="btn btn-ttc"><a href="productos" role="button">Conocé nuestros productos!</a></button>
+        <button type="button" class="btn btn-ttc"><a href="{{url('listadoProductos')}}" role="button">Conocé nuestros productos!</a></button>
         </div>
       </div>
     </div>
