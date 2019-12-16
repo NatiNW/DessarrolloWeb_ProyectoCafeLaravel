@@ -11,7 +11,7 @@ div nav ul li{
   color: white;
   font-size: 10px;
 
-} 
+}
 
 
 #navbarSupportedContent a{
@@ -118,6 +118,7 @@ div nav ul li{
 .inicio-lista-2 span{
  font-size: 20px;
 }
+
 
 
 .preguntas{
@@ -233,6 +234,17 @@ footer h6{
 .footer-redes {
   padding-left: 25px;
 
+}
+
+.adminproductos h2{
+  font-family: 'Lobster', cursive;
+}
+
+.adminproductos{
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: Peru;
 }
 
 @media only screen and (min-width:768px){

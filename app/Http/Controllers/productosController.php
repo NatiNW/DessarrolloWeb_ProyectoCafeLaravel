@@ -1,21 +1,35 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Producto;
 
 class ProductosController extends Controller
 {
   public function listado(){
-    $productos = Producto::all();
-    return view ('productos', compact ('productos'));
+    $productosDescafeinados = Producto::where('categoria', '=', 'descafeinado')->get();
+    $productosCorto = Producto::where('categoria', '=', 'corto')->get();
+    $productosLargo = Producto::where('categoria', '=', 'largo')->get();
+    $vac = compact('productosDescafeinados', 'productosCorto', 'productosLargo');
+    return view ('listadoProductos', $vac);
   }
+
+
+  public function detalle($id)
+      {
+          $producto = Producto::find($id);
+          return view('detalleProducto',compact('producto'));
+      }
+
+
   public function alta(){
     return view('alta');
   }
   public function baja(){
     return view('baja');
+  }
+  public function modificar(){
+    return view('modificacion');
   }
 
 public function agregarProducto(Request $req)
@@ -40,13 +54,43 @@ public function agregarProducto(Request $req)
           ];
           $this->validate($req, $reglas, $mensajes);
           $productos = new Producto;
+
+          $ruta = $req->file("foto")->store("public");
+          $nombreArchivo = basename($ruta);
+
           $productos->nombreProducto = $req->nombre_producto;
           $productos->descripcion = $req->descripcion;
           $productos->precio = $req->precio;
           $productos->stock = $req->stock;
-          $productos->foto = $req->foto;
+          $productos->foto = $nombreArchivo;
           $productos->categoria = $req->categoria;
           $productos->save();
-          return redirect('/productos');
+          return redirect('/listadoProductos');
+      }
+
+      public function eliminarProducto(Request $req)
+      {
+        $producto = Producto::find($req["id"]);
+
+        $producto->delete();
+        return redirect('/listadoProductos');
+      }
+
+
+
+    public function modificarProducto(Request $req)
+      {
+        $producto = Producto::find($req["id"]);
+        $producto->titulo = $req["titulo"];
+        if($req->file("foto") != null){
+          $ruta = $req->file("foto")->store("public");
+          $nombreArchivo = basename($ruta);
+          $producto->foto = $nombreArchivo;
+        }
+        $producto->descripcion = $req["descripcion"];
+        $producto->precio = $req["precio"];
+        $producto->stock = $req["stock"];
+        $producto->save();
+        return redirect('/modificacion');
       }
 }

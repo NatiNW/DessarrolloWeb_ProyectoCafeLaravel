@@ -24,9 +24,7 @@
         </li>
       </ul>
       <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" href="tienda"><i class="fas fa-shopping-cart"></i></a>
-        </li>
+
 
         @guest
             <li class="nav-item">
@@ -38,7 +36,9 @@
                 </li>
             @endif
         @else
-
+          <li class="nav-item">
+            <a class="nav-link" href="shop"><i class="fas fa-shopping-cart"></i></a>
+          </li>
             <li class="nav-item dropdown">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -74,7 +74,7 @@
   <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
 
       <nav class="navbar navbar-expand-lg navbar-light bg">
-        <a class="navbar-brand" href="index">
+        <a class="navbar-brand" href="{{url('/')}}">
           <img src="/img/pocilloinicioblanco.png" alt="Coffee">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -87,20 +87,26 @@
               <a class="nav-link" href="{{url('/')}}">Inicio</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="productos">Productos</a>
+              <a class="nav-link" href="{{url('listadoProductos')}}">Productos</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="tienda">Tienda</a>
+              <a class="nav-link" href="{{url('tienda')}}">Tienda</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="nosotros">Nosotros</a>
+              <a class="nav-link" href="{{url('nosotros')}}">Nosotros</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="preguntasFrecuentes">Preguntas Frecuentes</a>
+              <a class="nav-link" href="{{url('preguntasFrecuentes')}}">Preguntas Frecuentes</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="contacto">Contacto</a>
+              <a class="nav-link" href="{{url('contacto')}}">Contacto</a>
             </li>
+
+            @if(Auth::user()&&(Auth::user()->admin))
+            <li class="nav-item active">
+              <a class="nav-link" href="{{url('administrador')}}">Administrador</a>
+            </li>
+           @endif
 
           </ul>
 
@@ -133,12 +139,12 @@
   <div class="col-md-6 footer-identidad">
   <h6>Coffee Code</h6>
   <ul>
-    <li><a href="/">Inicio</a></li>
-    <li><a href="productos">Productos</a></li>
-    <li><a href="tienda">Tienda</a></li>
-    <li><a href="nosotros">Nosotros</a></li>
-    <li><a href="preguntasFrecuentes">Preguntas Frecuentes</a></li>
-    <li><a href="contacto">Contactanos</a></li>
+    <li><a href="{{url('/')}}">Inicio</a></li>
+    <li><a href="{{url('listadoProductos')}}">Productos</a></li>
+    <li><a href="{{url('tienda')}}">Tienda</a></li>
+    <li><a href="{{url('nosotros')}}">Nosotros</a></li>
+    <li><a href="{{url('preguntasFrecuentes')}}">Preguntas Frecuentes</a></li>
+    <li><a href="{{url('contacto')}}">Contactanos</a></li>
   </ul>
 </div>
 

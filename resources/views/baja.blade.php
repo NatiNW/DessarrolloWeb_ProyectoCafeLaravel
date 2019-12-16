@@ -1,68 +1,39 @@
 @extends('plantilla')
 @section('principal')
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-<div class="container">
-<h2>Baja De Productos</h2>
-<p>Para dar de baja un producto debe hacer clic en el botón Eliminar</p>
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Eliminar</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Volluto Decaffeinato</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Arpeggio Decaffeinato</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Vivalto Lungo Decaffeinato</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Spicy Intenso</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Oscuro</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>6</td>
-      <td>Caramelito</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Vivalto Lungo</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Linizio Lungo</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-    <tr>
-      <td>9</td>
-      <td>Linizio Lungo</td>
-      <td><button type="button" class="btn btn-default">Eliminar</button></td>
-    </tr>
-  </tbody>
-</table>
+
+  <link rel="stylesheet" href="/css/productos.css">
+
+  <div class="container productos">
+
+  @foreach ($productos as $producto)
+
+  <div class="">
+  <h2>{{ $producto['categoria']}}</h2>
+  <div class="row inicio-lista-1">
+
+  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+  <h3>{{ $producto['nombreProducto'] }}</h3>
+  <h4>{{ $producto['descripcion'] }}</h4>
+  <div class="">
+  <img src=src="/storage/{{ $producto->foto }}" alt="">
+    <button type="button" class="btn btn-ttc"><a href={{ url("/detalleProducto/{$producto->id}") }} role="button">Ver Mas!</a></button>
 </div>
+<div class="">
+                  <form action="/borrar" method="post">
+                    @csrf
+                    <input type="hidden" name="id" value="{{$producto->id}}">
+                    <button type="submit"class="btn btn-ttc" name="borrate"></i> Borrar</button>
+                  </form>
+
+          </div>
+  @endforeach
+</div>
+</div>
+
+
+
+
+
+
 
 @endsection

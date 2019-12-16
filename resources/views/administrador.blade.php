@@ -1,6 +1,9 @@
 @extends('plantilla')
 @section('principal')
 
+<div class="col-12 adminproductos">
+
+
   <h2>Administración de productos de Coffee Code</h2>
 
   <ul>
@@ -15,5 +18,6 @@
     </li>
   </ul>
 
+</div>
 
 @endsection

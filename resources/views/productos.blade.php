@@ -15,7 +15,7 @@
   <h4>CAFÉ DULCE Y LIGERO</h4>
 	<div class="">
   <img src="img/cap1.jpg" alt="">
-    <button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+    <button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
   </div>
 	</div>
 
@@ -24,7 +24,7 @@
   <h4>CAFÉ INTENSO</h4>
   <div class="">
   <img src="img/cap2.jpg" alt="">
-    <button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+    <button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
 	</div>
   </div>
 
@@ -33,7 +33,7 @@
   <h4>CAFÉ BALANCEADO</h4>
   <div class="">
   <img src="img/cap3.jpg" alt="" >
-    <button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+    <button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
 	</div>
   </div>
 </div>
@@ -49,7 +49,7 @@
   <h4>INTENSO Y ALMIBARADO</h4>
   <div class="">
   <img src="img/cap4.jpg" alt="" >
-    <button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+    <button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
   </div>
   </div>
 
@@ -58,7 +58,7 @@
   <h4>ESPRESSO MACCHIATO</h4>
   <div class="">
   <img src="img/cap5.jpg" alt="">
-    <button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+    <button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
   </div>
   </div>
 
@@ -67,7 +67,7 @@
   <h4>CAFÉ CON AROMA</h4>
   <div class="">
   <img src="img/cap6.jpg" alt="">
-    <button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+    <button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
   </div>
   </div>
 </div>
@@ -82,7 +82,7 @@
   <h4>CAFÉ BALANCEADO</h4>
   <div class="">
   <img src="img/cap7.jpg" alt="">
-    <button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+    <button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
   </div>
   </div>
 
@@ -91,7 +91,7 @@
   <h4>CAFÉ REDONDO Y SUAVE</h4>
   <div class="">
   <img src="img/cap8.jpg" alt="">
-    <button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+    <button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
   </div>
   </div>
 
@@ -100,7 +100,7 @@
   <h4>CAFÉ ATERCIOPELADO</h4>
   <div class="">
   <img src="img/cap9.jpg" alt="">
-<button type="button" class="btn btn-ttc"><a href="tienda" role="button">Ver Mas!</a></button>
+<button type="button" class="btn btn-ttc"><a href="detalleProducto" role="button">Ver Mas!</a></button>
   </div>
   </div>
 </div>
