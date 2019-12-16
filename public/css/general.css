@@ -247,6 +247,43 @@ footer h6{
   background-color: Peru;
 }
 
+.detalleProducto{
+  width:400px;
+  text-align: center;
+  background-color: #8B4513;
+  padding: 25px;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border-color: #FFFFFF;
+  margin-left: 350px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.detalleProducto h2{
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+}
+.detalleProducto h3{
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+}
+
+.detalleProducto p{
+  font-family: 'Gayathri', sans-serif;
+  font-size: 20px;
+}
+
+.detalleProducto p{
+  font-family: 'Gayathri', sans-serif;
+  }
+
+
+
+
+
 @media only screen and (min-width:768px){
 
   div nav ul li{

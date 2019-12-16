@@ -20,6 +20,10 @@ Route::get('/preguntasFrecuentes', function () {
     return view('preguntasFrecuentes');
 });
 
+Route::get('/miPerfil', function () {
+  return view('miPerfil');
+ });
+
 Route::get('/listadoProductos','ProductosController@listado');
 
 Route::get('/detalleProducto/{id}','ProductosController@detalle');
@@ -32,11 +36,11 @@ Route::get('/alta','ProductosController@alta')->middleware('isAdmin');
 
 Route::post('/alta','ProductosController@agregarProducto')->middleware('isAdmin');
 
-Route::get('/modificacion','ProductosController@modificacion')->middleware('isAdmin');
+Route::get('/modificacion/{id}','ProductosController@modificar')->middleware('isAdmin');
 
-Route::get('/modificacion/{id}', 'ProductosController@modificar')->middleware('isAdmin');
+Route::post('/modificarProducto','ProductosController@modificarProducto')->middleware('isAdmin');
 
-
+Route::post('/actualizar','ProductosController@actualizarProducto')->middleware('isAdmin');
 
 Route::get('/usuario','usuariosController@listado');
 

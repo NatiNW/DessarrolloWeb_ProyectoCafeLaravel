@@ -1,7 +1,7 @@
 @extends('plantilla')
 @section('principal')
 
-@csrf
+
 <div class="row carga">
   <div class="col-12 carga-de-productos">
     <h3>Carga de nuevos productos</h3>
@@ -33,7 +33,7 @@
         <small style="color:red"> </small>
         <div class="form-group">
 
-            <label for="precio">Stock:</label>
+            <label for="stock">Stock:</label>
             <input type="text" name="stock" value="">
             @error('stock')
             <strong style="color:red">
@@ -56,9 +56,9 @@
           <label for="categoria_del_producto">Categoría:</label>
           <select class="" name="categoria" value="">
 
-            <option value="descafeinado">Descafeinado</option>
-            <option value="largo">Largo</option>
-            <option value="corto">Corto</option>
+            <option value="Descafeinado">Descafeinado</option>
+            <option value="Largo">Largo</option>
+            <option value="Corto">Corto</option>
           </select>
         </div>
       <div class="form-group">

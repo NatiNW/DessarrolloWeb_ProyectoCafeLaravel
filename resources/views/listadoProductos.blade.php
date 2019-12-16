@@ -3,6 +3,8 @@
 @section('principal')
   <link rel="stylesheet" href="/css/productos.css">
 
+
+
 <div class="container productos">
 
   <div class="">
@@ -65,4 +67,5 @@
 </div>
 
 </div>
+
 @endsection

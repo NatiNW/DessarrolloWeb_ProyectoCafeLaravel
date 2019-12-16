@@ -26,11 +26,13 @@ class ProductosController extends Controller
     return view('alta');
   }
   public function baja(){
-    return view('baja');
+    $productos = Producto::all();
+    return view('baja',compact('productos'));
   }
-  public function modificar(){
-    return view('modificacion');
-  }
+  public function modificar(Request $r){
+      $producto = Producto::find($r->id);
+      return view('modificacion',compact('producto'));
+    }
 
 public function agregarProducto(Request $req)
       {
@@ -70,27 +72,30 @@ public function agregarProducto(Request $req)
 
       public function eliminarProducto(Request $req)
       {
+
         $producto = Producto::find($req["id"]);
 
         $producto->delete();
-        return redirect('/listadoProductos');
+        return redirect('/baja');
       }
 
 
 
     public function modificarProducto(Request $req)
       {
-        $producto = Producto::find($req["id"]);
-        $producto->titulo = $req["titulo"];
+
+        $producto = Producto::find($req['id']);
+
+        $producto->nombreProducto = $req['nombre_producto'];
         if($req->file("foto") != null){
           $ruta = $req->file("foto")->store("public");
           $nombreArchivo = basename($ruta);
           $producto->foto = $nombreArchivo;
         }
-        $producto->descripcion = $req["descripcion"];
-        $producto->precio = $req["precio"];
+        $producto->descripcion = $req['descripcion'];
+        $producto->precio = $req['precio'];
         $producto->stock = $req["stock"];
         $producto->save();
-        return redirect('/modificacion');
+        return redirect('/listadoProductos');
       }
 }
