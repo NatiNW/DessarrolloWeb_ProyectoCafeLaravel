@@ -25,7 +25,7 @@
       </ul>
       <ul class="nav justify-content-end">
         <li class="nav-item">
-          <a class="nav-link" href="shop"><i class="fas fa-shopping-cart"></i></a>
+          <a class="nav-link" href="tienda"><i class="fas fa-shopping-cart"></i></a>
         </li>
 
         @guest
@@ -123,6 +123,9 @@
 @yield('faq')
 
 @yield('contacto')
+
+@yield('tienda')
+
 <footer class='container '>
   <div class="row">
 
@@ -132,7 +135,7 @@
   <ul>
     <li><a href="/">Inicio</a></li>
     <li><a href="productos">Productos</a></li>
-    <li><a href="shop">Tienda</a></li>
+    <li><a href="tienda">Tienda</a></li>
     <li><a href="nosotros">Nosotros</a></li>
     <li><a href="preguntasFrecuentes">Preguntas Frecuentes</a></li>
     <li><a href="contacto">Contactanos</a></li>
