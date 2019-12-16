@@ -9,7 +9,7 @@
       <img src="/storage/{{Auth::user()->avatar}}" alt="">
     </div>
 
-  
+
   </div>
 
 @endsection

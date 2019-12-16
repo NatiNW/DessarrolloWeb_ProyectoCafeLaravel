@@ -1,10 +1,7 @@
 @extends('plantilla')
-<<<<<<< HEAD
-@section('principal')
-=======
-@section('admin')
 
->>>>>>> 10776bdb897cc4eebd4f7eb6da238bd6a13ce434
+@section('principal')
+
   <link rel="stylesheet" href="/css/productos.css">
 
   <div class="container productos">
@@ -42,5 +39,9 @@
   </div>
   </div>
   </div>
+
+
+
+
 
 @endsection
