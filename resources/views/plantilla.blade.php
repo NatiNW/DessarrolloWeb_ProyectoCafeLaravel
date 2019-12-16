@@ -120,7 +120,7 @@
     </header>
 
 
-@yield('principal')
+@yield('admin')
 
 @yield('productos')
 

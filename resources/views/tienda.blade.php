@@ -2,7 +2,7 @@
 @extends('plantilla')
 @section('tienda')
 
-<link href="{{ asset('css/carrito.css') }}" rel="stylesheet">
+
 
 <div class="container">
 <h2 class="mb-3"><i class="fas fa-shopping-cart"></i> Carrito</h2>

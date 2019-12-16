@@ -15,9 +15,14 @@
   <p class="">{{ $producto->precio}}</p>
 	<div class="">
   <img src="/storage/{{ $producto->foto }}" alt="">
-  <form action="/agregarACarrito/{{ $producto->id }}">
+  @guest
+  <p>Debe estar registrado para agregar el producto.</p>
+  @else
+  <form action="/agregarACarrito/{{ $producto->id }}" method='POST' >
+    @csrf
     <button class="btn btn-ttc" type="submit"><i class="fas fa-shopping-cart"></i> Agregar</button>
   </form>
+  @endGuest
   </div>
 	</div>
 
