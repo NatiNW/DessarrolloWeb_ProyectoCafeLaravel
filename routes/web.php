@@ -4,9 +4,7 @@ Route::get('/', function () {
   return view('presentacion');
  });
 
-Route::get('/tienda', function () {
-    return view('tienda');
-});
+Route::get('/tienda', 'carritoController@listar');
 
 Route::get('/nosotros', function () {
     return view('nosotros');
@@ -48,10 +46,12 @@ Route::get('/carrito','carritoController@listado');
 
 Route::get('/categoria','categoriaController@listado');
 
-Route::get('/administrador', function(){
-  return view('administrador');
-})->middleware('isAdmin');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/agregarACarrito/{id}','carritoController@agregar');
+
+Route::get('/administrador', function(){
+    return view('administrador');
+})->middleware('isAdmin');

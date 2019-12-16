@@ -1,5 +1,5 @@
 @extends('plantilla')
-@section('principal')
+@section('admin')
 
 <div class="col-12 adminproductos">
 

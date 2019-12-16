@@ -1,5 +1,5 @@
 @extends('plantilla')
-@section('principal')
+@section('admin')
 
 
 <div class="row carga">

@@ -121,7 +121,7 @@
     </header>
 
 
-@yield('principal')
+@yield('admin')
 
 @yield('productos')
 
@@ -130,6 +130,9 @@
 @yield('faq')
 
 @yield('contacto')
+
+@yield('tienda')
+
 <footer class='container '>
   <div class="row">
 
