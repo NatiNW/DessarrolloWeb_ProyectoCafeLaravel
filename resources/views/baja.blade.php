@@ -23,13 +23,13 @@
     <form action="baja" method="post">
                     @csrf
                     <input type="hidden" name="id" value="{{$producto->id}}">
-                    <button type="submit"class="btn btn-ttc" name="baja">Borrar</button>
+                    <button type="submit"class="btn btn-ttc2" name="baja">Borrar</button>
     </form>
   </div>
   <div class="">
     <form action="/modificacion/{{$producto->id}}" method="get">
                     <input type="hidden" name="id" value="{{$producto->id}}">
-                    <button type="submit" class="btn btn-ttc" name="modificar">Modificar</button>
+                    <button type="submit" class="btn btn-ttc3" name="modificar">Modificar</button>
   </form>
 
   </div>

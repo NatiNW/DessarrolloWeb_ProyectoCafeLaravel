@@ -14,7 +14,7 @@
   <h2>{{ $producto->categoria}}</h2>
   <h3>{{ $producto->nombreProducto}}</h3>
   <h4>{{ $producto->descripcion }}</h4>
-  <p class="">Precio: ${{ $producto->precio}}</p>
+  <p class="">Precio por unidad: ${{ $producto->precio}}</p>
 	<div class="detalleCarrito">
   <img src="/storage/{{ $producto->foto }}" alt="">
   @guest

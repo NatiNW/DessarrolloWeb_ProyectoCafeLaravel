@@ -58,6 +58,27 @@ div nav ul li{
   font-size: 10px;
 }
 
+.btn-ttc2{
+  background-color: red;
+  height: 50px;
+  width: 200px;
+}
+
+.btn-ttc2 a{
+  color: white;
+  font-size: 10px;
+}
+
+.btn-ttc3{
+  background-color: green;
+  height: 50px;
+  width: 200px;
+}
+
+.btn-ttc3 a{
+  color: white;
+  font-size: 10px;
+}
 .inicio-productos {
   text-align: center;
   padding: 15px;
@@ -118,7 +139,6 @@ div nav ul li{
 .inicio-lista-2 span{
  font-size: 20px;
 }
-
 
 
 .preguntas{
@@ -281,8 +301,6 @@ footer h6{
 
 
 
-
-
 @media only screen and (min-width:768px){
 
   div nav ul li{
@@ -431,6 +449,10 @@ footer h6{
 
   }
 
+.navinferior{
+  margin-left: 100px;
+}
+
   .btn-ttc a{
     color: white;
     font-size: 30px;
@@ -450,6 +472,11 @@ footer h6{
     font-family: 'Lobster', cursive;
     color: white;
     font-size: 20px;
+  }
+
+  .detalleProducto{
+    margin-left: 350px;
+    margin-right: 200px
   }
 
 

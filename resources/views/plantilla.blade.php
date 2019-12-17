@@ -71,8 +71,8 @@
 
 
 
-<div class="container navinferior">
-  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+<div class="container">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 navinferior">
 
       <nav class="navbar navbar-expand-lg navbar-light bg">
         <a class="navbar-brand" href="{{url('/')}}">
