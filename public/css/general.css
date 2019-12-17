@@ -253,11 +253,10 @@ footer h6{
   background-color: #8B4513;
   padding: 25px;
   color: white;
-  margin-left: 10px;
   margin-right: 10px;
   border-radius: 10px;
   border-color: #FFFFFF;
-  margin-left: 350px;
+  margin-left: 250px;
   margin-top: 50px;
   margin-bottom: 100px;
 }
@@ -400,7 +399,9 @@ footer h6{
   font-size: 20px;
 }
 
-
+.detalleProducto{
+  margin-left: 150px;
+  margin-right: 100px
 }
 
 

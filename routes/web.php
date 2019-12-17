@@ -4,6 +4,10 @@ Route::get('/', function () {
   return view('presentacion');
  });
 
+ Route::get('/tienda', function () {
+   return view('tienda');
+  });
+
 Route::get('/tienda', 'carritoController@listar');
 
 Route::get('/nosotros', function () {
@@ -38,7 +42,7 @@ Route::get('/modificacion/{id}','ProductosController@modificar')->middleware('is
 
 Route::post('/modificarProducto','ProductosController@modificarProducto')->middleware('isAdmin');
 
-Route::post('/actualizar','ProductosController@actualizarProducto')->middleware('isAdmin');
+
 
 Route::get('/usuario','usuariosController@listado');
 

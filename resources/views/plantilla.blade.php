@@ -55,7 +55,7 @@
                 </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="shop"><i class="fas fa-shopping-cart"></i></a>
+              <a class="nav-link" href="{{ url('tienda') }}"><i class="fas fa-shopping-cart"></i></a>
             </li>
             <li class="nav-item">
           <a class="nav-link" href="{{ url('miPerfil') }}">Mi Perfil</a>
@@ -91,9 +91,6 @@
               <a class="nav-link" href="{{url('listadoProductos')}}">Productos</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="{{url('tienda')}}">Tienda</a>
-            </li>
-            <li class="nav-item active">
               <a class="nav-link" href="{{url('nosotros')}}">Nosotros</a>
             </li>
             <li class="nav-item active">
@@ -103,9 +100,15 @@
               <a class="nav-link" href="{{url('contacto')}}">Contacto</a>
             </li>
 
-            @if(Auth::user()&&(Auth::user()->admin))
+            @if (Auth::user())
             <li class="nav-item active">
-              <a class="nav-link" href="{{url('administrador')}}">Administrador</a>
+              <a class="nav-link" href="{{url('tienda')}}">Tienda</a>
+            </li>
+          @endif
+
+            @if(Auth::user()&&(Auth::user()->admin))
+            <li>
+           <a class="nav-link" href="{{url('administrador')}}">Administrador</a>
             </li>
            @endif
 
@@ -133,6 +136,8 @@
 
 @yield('tienda')
 
+@yield('principal')
+
 <footer class='container '>
   <div class="row">
 
@@ -142,7 +147,9 @@
   <ul>
     <li><a href="{{url('/')}}">Inicio</a></li>
     <li><a href="{{url('listadoProductos')}}">Productos</a></li>
+  @if (Auth::user())
     <li><a href="{{url('tienda')}}">Tienda</a></li>
+  @endif
     <li><a href="{{url('nosotros')}}">Nosotros</a></li>
     <li><a href="{{url('preguntasFrecuentes')}}">Preguntas Frecuentes</a></li>
     <li><a href="{{url('contacto')}}">Contactanos</a></li>
@@ -178,6 +185,3 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     </body>
   </html>
-
-
-  

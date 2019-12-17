@@ -13,7 +13,7 @@
 
   @foreach ($productosDescafeinados as $producto)
 
-  <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+  <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
   <h3>{{ $producto['nombreProducto'] }}</h3>
   <h4>{{ $producto['descripcion'] }}</h4>
 	<div class="">
@@ -32,7 +32,7 @@
 
 @foreach ($productosCorto as $producto)
 
-<div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 <h3>{{ $producto['nombreProducto'] }}</h3>
 <h4>{{ $producto['descripcion'] }}</h4>
 <div class="">
@@ -52,7 +52,7 @@
 
 @foreach ($productosLargo as $producto)
 
-<div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+<div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 <h3>{{ $producto['nombreProducto'] }}</h3>
 <h4>{{ $producto['descripcion'] }}</h4>
 <div class="">

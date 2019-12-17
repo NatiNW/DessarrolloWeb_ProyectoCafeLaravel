@@ -77,7 +77,7 @@
 
                         <div class="form-group form-check">
                             <div class="col-md-6">
-                                <input id="terminos" type="checkbox" name="terminos">
+                                <input id="terminos" type="checkbox" name="terminos" required>
                                 <label for="terminos" class="">{{ __('Acepta terminos y condiciones') }}</label>
                             </div>
                         </div>
