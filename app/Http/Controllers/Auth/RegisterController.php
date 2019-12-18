@@ -52,7 +52,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'avatar'=>['nullable','image', 'between: 100,1024'],
+            'avatar'=>['nullable','image'],
             'terminos'=>['required'],
         ]);
     }
@@ -66,8 +66,10 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
       $ruta = '';
-      if(isset($data['avatar']))
+      if(isset($data['avatar'])) {
         $ruta = basename($data['avatar']->store('public'));
+      }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -75,5 +77,5 @@ class RegisterController extends Controller
             'avatar' => ($ruta),
         ]);
     }
-    
+
 }

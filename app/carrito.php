@@ -9,4 +9,8 @@ class carrito extends Model
     public $timestamps="false";
     public $guarded=[];
 
+    public function producto()
+    {
+      return $this->belongsTo(Producto::class, 'id_producto');
+    }
 }
