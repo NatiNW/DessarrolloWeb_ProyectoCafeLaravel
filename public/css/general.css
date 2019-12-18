@@ -267,6 +267,12 @@ footer h6{
   background-color: Peru;
 }
 
+
+.adminproductos a{
+  font-family: 'Lobster', cursive;
+  color: black;
+}
+
 .detalleProducto{
   width:400px;
   text-align: center;
