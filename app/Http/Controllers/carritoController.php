@@ -23,8 +23,31 @@ class carritoController extends Controller
 
     $carrito->save();
 
-    return redirect('/');
+    return redirect('tienda');
 
   }
+  public function restar($id){
+        $producto = Carrito::find($id);
+        $producto->cantidad--;
+        if($producto->cantidad == 0){
+            $this->eliminar($id);
+        }else{
+            $producto->save();
+        }
 
+        return redirect('tienda');
+    }
+
+    public function sumar($id){
+        $producto = Carrito::find($id);
+        $producto->cantidad++;
+        $producto->save();
+        return redirect('tienda');
+    }
+    public function eliminar($id){
+        $producto = Carrito::find($id);
+        $producto->delete();
+
+        return redirect('tienda');
+    }
 }

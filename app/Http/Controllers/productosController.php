@@ -98,4 +98,6 @@ public function agregarProducto(Request $req)
         $producto->save();
         return redirect('/listadoProductos');
       }
-}
+
+
+    }

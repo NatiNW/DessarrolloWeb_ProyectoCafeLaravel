@@ -59,3 +59,7 @@ Route::post('/agregarACarrito/{id}','carritoController@agregar');
 Route::get('/administrador', function(){
     return view('administrador');
 })->middleware('isAdmin');
+
+Route::get('/eliminarDelCarrito/{id}', 'carritoController@eliminar');
+Route::get('/restarUnaUnidad/{id}', 'carritoController@restar');
+Route::get('/sumarUnaUnidad/{id}', 'carritoController@sumar');
