@@ -8,10 +8,13 @@ use \App\Carrito;
 
 class carritoController extends Controller
 {
+
   public function listar(){
     $listado = Carrito::where('id_usuario',Auth::user()->id)->get();
-    return view('tienda',compact('listado'));
+    $total =$this->total();
+    return view('tienda',compact('listado','total'));
   }
+
   public function agregar(Request $form,$id){
     $idUsuario = Auth::user()->id;
     $idProducto = $id;
@@ -49,5 +52,15 @@ class carritoController extends Controller
         $producto->delete();
 
         return redirect('tienda');
+    }
+
+    private function total()
+    {
+      $listado = Carrito::where('id_usuario',Auth::user()->id)->get();
+      $total = 0;
+      foreach ($listado as $producto) {
+        $total += $producto->producto->precio * $producto->cantidad;
+      }
+      return $total;
     }
 }
