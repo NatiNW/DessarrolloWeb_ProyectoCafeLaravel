@@ -1,10 +1,10 @@
-.nosotros h2{
+.nosotros h4{
     font-family: 'Lobster', cursive;
     text-align: center;
     color: black;
 }
 
-.nosotros h1{
+.nosotros h3{
   text-align: center;
   color: black;
 }
@@ -37,8 +37,19 @@ p {
 .nosotros{
   background-color: peru;
   padding-bottom: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .img{
   text-align: center;
+
+}
+
+.img img{
+  width: 150px;
+}
+
+.nuestra_historia{
+  padding-bottom: 25px;
 }
