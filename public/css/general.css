@@ -19,6 +19,7 @@ div nav ul li{
 #navbarSupportedContent a{
   color: red;
   display: inline-block;
+  font-size: 15px;
 }
 
 .navsuperior{
@@ -41,7 +42,7 @@ div nav ul li{
 }
 
 .dropdown-menu{
-  background-color: Peru;
+  background-color: red;
 
 }
 
@@ -145,9 +146,9 @@ div nav ul li{
 
 
 .preguntas{
-  padding: 25px;
-  margin-left: 150px;
-  margin-right: 150px;
+  padding: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
   background-color: Peru;
   border-radius: 5px;
 }
@@ -315,7 +316,7 @@ footer h6{
 
   div nav ul li{
     font-family: 'Lobster', cursive;
-    color: white;
+    color: red;
     font-size: 20px;
 
   }
@@ -423,7 +424,7 @@ footer div ul li a{
 
 footer h6{
   font-family: 'Lobster', cursive;
-  color: white;
+  color: red;
   font-size: 20px;
 }
 
@@ -436,13 +437,20 @@ footer h6{
 @media only screen and (min-width:1024px){
 
   div nav ul li{
-    font-size: 20px;
+    font-size: 25px;
+    color: red;
 
   }
 
   nav a img{
     width: 80px;
     height: 50px;
+  }
+
+  #navbarSupportedContent a{
+    color: red;
+    display: inline-block;
+    font-size: 25px;
   }
 
   .btn-ttc {
