@@ -1,72 +1,53 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+import os
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# Contenido del README.md
+readme_content = """# Desarrollo Web: Proyecto Café (Laravel 7)
 
-## About Laravel
+Este proyecto es una aplicación de gestión para una cafetería/supermercado desarrollada originalmente en 2019. Recientemente, se ha realizado una auditoría de seguridad y mantenimiento preventivo para asegurar la integridad de la base de código.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠 Mantenimiento y Seguridad (Abril 2026)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Como parte de mi transición profesional hacia el **Análisis de Datos**, he realizado una limpieza técnica del repositorio, priorizando la seguridad en la comunicación de datos y la documentación de riesgos en sistemas legacy.
 
-## Learning Laravel
+### 1. Resoluciones de Seguridad (Vulnerabilidades Críticas)
+Se han aplicado parches manuales y mediante herramientas de gestión de paquetes para cerrar brechas de seguridad activas:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Axios (CVE-2023-45853):** Se actualizó la librería de `^0.19` a `^1.6.0`. Esta actualización fue prioritaria ya que Axios gestiona las peticiones HTTP y la transferencia de datos, eliminando el riesgo de exfiltración de metadatos y ataques SSRF.
+- **Flujo de Trabajo:** La resolución se gestionó mediante una rama de corrección (`fix/axios-security`) y un *Pull Request* para validar la integridad del cambio antes de unirlo a la rama `master`.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2. Auditoría de Dependencias de Desarrollo (NPM)
+Se ejecutó `npm audit fix` para mitigar vulnerabilidades en el entorno de desarrollo.
+- **Nota técnica:** Algunas alertas en `webpack-dev-server` se mantienen por compatibilidad. Dado que este componente solo se utiliza en el entorno de pre-compilación local y no afecta a la aplicación en producción ni a la base de datos, se ha documentado como un **riesgo aceptable** para preservar la estabilidad del entorno legacy.
 
-## Laravel Sponsors
+### 3. Gestión de Entorno PHP (Composer)
+Se identificaron vulnerabilidades en `PHPUnit` relacionadas con la deserialización de datos en el entorno de pruebas. 
+- **Decisión de Ingeniería:** Tras evaluar el impacto, se decidió documentar estas versiones en lugar de forzar una actualización que requeriría una migración completa del framework (Laravel 7 a Laravel 11). 
+- **Enfoque Data-Centric:** Al estar orientado al análisis de datos estáticos y visualización, el foco se mantuvo en asegurar la **fuente de los datos** y no el motor de tests unitarios del backend.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+## 📈 Conexión con Análisis de Datos
+Este proyecto sirve como base para mis prácticas de análisis de ventas:
+- **Fuente de datos:** Gestión de inventarios y ventas mensuales desde 2013.
+- **Integridad:** La limpieza de este repositorio asegura que los datos extraídos para procesos de ETL (Extract, Transform, Load) provengan de un entorno seguro.
+- **Tecnologías relacionadas:** PHP/Laravel (Backend), MySQL (Data Source), Git (Version Control).
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 🚀 Cómo ejecutarlo (Legacy Mode)
+1. Clonar el proyecto: `git clone https://github.com/NatiNW/DessarrolloWeb_ProyectoCafeLaravel.git`
+2. Instalar dependencias: `npm install`
+3. Ejecutar entorno de desarrollo: `npm run dev` (Requiere Node.js con `--openssl-legacy-provider` para compatibilidad con Webpack 4).
 
-## Security Vulnerabilities
+---
+**Contacto:** [Tu LinkedIn] | Orientada al Análisis de Datos y Resolución Técnica.
+"""
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Guardar el archivo
+file_path = "README_Proyecto_Cafe_v2.md"
+with open(file_path, "w", encoding="utf-8") as f:
+    f.write(readme_content)
 
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+print(f"Archivo generado: {file_path}")
