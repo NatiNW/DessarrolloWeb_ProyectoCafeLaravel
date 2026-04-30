@@ -42,7 +42,7 @@ Este proyecto sirve como base para mis prácticas de análisis de ventas:
 3. Ejecutar entorno de desarrollo: `npm run dev` (Requiere Node.js con `--openssl-legacy-provider` para compatibilidad con Webpack 4).
 
 ---
-**Contacto:** [Tu LinkedIn] | Orientada al Análisis de Datos y Resolución Técnica.
+**Contacto:** www.linkedin.com/in/natalia-niz-wagner | Orientada al Análisis de Datos y Resolución Técnica.
 """
 
 # Guardar el archivo
